@@ -136,7 +136,7 @@ src="https://www.facebook.com/tr?id=1006418772455488&ev=PageView&noscript=1"
 </div></div></section>
 
 <section class="join"><div class="wrap"><div class="joinbox">
-<div><h2>Daily Market & Task Updates</h2><p>Join Telegram Channel <b>@Axev78</b> for available tasks and instructions.</p><div class="count" id="count">Telegram opens in 10 seconds…</div></div>
+<div><h2>Daily Market & Task Updates</h2><p>Join Telegram Channel <b>@Axev78</b> for available tasks and instructions.</p><div class="count" id="count">Open Telegram to continue</div></div>
 <div class="actions"><a class="btn primary telegram-btn js-telegram" href="https://t.me/Axev78?text=HI%2C%20PLEASE%20GUIDE%20ME%20FOR%20THIS%20OPPORTUNITY%20">Join Telegram Channel</a><a class="btn secondary whatsapp-btn js-whatsapp" href="https://wa.link/eywapt">WhatsApp</a></div>
 </div></div></section>
 </main>
@@ -148,28 +148,14 @@ src="https://www.facebook.com/tr?id=1006418772455488&ev=PageView&noscript=1"
 
 <script>
 const target="https://t.me/Axev78?text=HI%2C%20PLEASE%20GUIDE%20ME%20FOR%20THIS%20OPPORTUNITY%20";
-let n=10;
 let leadSent=false;
-const el=document.getElementById("count");
-let timer;
 function sendLead(){
   if(leadSent) return;
   leadSent=true;
   if(typeof fbq==="function") fbq("track","Lead",{content_name:"Skillz India Telegram Lead"});
 }
-function goTelegram(){
-  clearInterval(timer);
+document.querySelectorAll(".js-telegram").forEach(e=>e.addEventListener("click",function(){
   sendLead();
-  setTimeout(()=>{window.location.href=target;},500);
-}
-timer=setInterval(()=>{
-  n--;
-  el.textContent=n>0?"Telegram opens in "+n+" seconds…":"Opening Telegram…";
-  if(n<=0){clearInterval(timer);goTelegram();}
-},1000);
-document.querySelectorAll(".js-telegram").forEach(e=>e.addEventListener("click",function(ev){
-  ev.preventDefault();
-  goTelegram();
 }));
 document.querySelectorAll(".js-whatsapp").forEach(e=>e.addEventListener("click",()=>{
   if(typeof fbq==="function") fbq("track","Contact",{channel:"whatsapp"});
