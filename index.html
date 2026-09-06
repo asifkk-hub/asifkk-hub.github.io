@@ -20,8 +20,15 @@ header{background:rgba(246,248,252,.92);backdrop-filter:blur(12px);border-bottom
 .pill{display:inline-flex;padding:7px 12px;border-radius:999px;background:var(--soft);color:#5148d8;font-size:12px;font-weight:900}
 h1{font-size:clamp(40px,6vw,68px);line-height:1.02;letter-spacing:-2.8px;margin:18px 0 15px}.accent{color:var(--brand)}
 .hero p{font-size:17px;line-height:1.7;color:var(--muted);max-width:620px}
-.actions{display:flex;gap:11px;flex-wrap:wrap;margin-top:24px}.btn{min-height:48px;padding:0 19px;border-radius:11px;display:inline-flex;align-items:center;justify-content:center;font-weight:850;border:1px solid var(--line)}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.btn{min-height:58px;padding:0 24px;border-radius:14px;display:inline-flex;align-items:center;justify-content:center;font-weight:850;border:1px solid var(--line);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;font-size:16px;letter-spacing:.1px;transition:transform .18s ease,box-shadow .18s ease}.btn:hover{transform:translateY(-2px)}
 .primary{background:var(--brand);color:#fff;border-color:var(--brand)}.secondary{background:#fff}
+/* Branded contact buttons */
+.telegram-btn{background:#229ED9!important;color:#fff!important;border-color:#229ED9!important;font-weight:900!important;min-height:64px;padding:0 28px;font-size:17px;box-shadow:0 7px 20px rgba(34,158,217,.28);animation:telegramPulse 1.25s ease-in-out infinite}
+.whatsapp-btn{background:#25D366!important;color:#fff!important;border-color:#25D366!important;font-weight:900!important;min-height:64px;padding:0 28px;font-size:17px;box-shadow:0 7px 20px rgba(37,211,102,.25);animation:whatsappPulse 1.25s ease-in-out infinite}
+.telegram-btn:hover,.whatsapp-btn:hover{transform:scale(1.035)}
+@keyframes telegramPulse{0%,100%{box-shadow:0 7px 20px rgba(34,158,217,.25)}50%{box-shadow:0 0 0 8px rgba(34,158,217,.13),0 10px 26px rgba(34,158,217,.38)}}
+@keyframes whatsappPulse{0%,100%{box-shadow:0 7px 20px rgba(37,211,102,.23)}50%{box-shadow:0 0 0 8px rgba(37,211,102,.12),0 10px 26px rgba(37,211,102,.34)}}
+@media (prefers-reduced-motion:reduce){.telegram-btn,.whatsapp-btn{animation:none}}
 .small{font-size:12px;color:#8a94a6;line-height:1.55;margin-top:13px}
 .heroCard{background:var(--dark);color:#fff;border-radius:24px;padding:24px;box-shadow:0 22px 55px rgba(17,24,39,.16)}
 .heroCardTop{display:flex;justify-content:space-between;align-items:center}.status{color:#5be0bd;font-size:11px;font-weight:900}
@@ -72,7 +79,7 @@ src="https://www.facebook.com/tr?id=1006418772455488&ev=PageView&noscript=1"
 <div class="pill">TASK-BASED OPPORTUNITIES • SIMPLE &amp; CLEAR</div>
 <h1>Complete Simple Tasks.<br><span class="accent">Build Digital Skills.</span></h1>
 <p>AX Marketing shares simple digital tasks for people looking for flexible, beginner-friendly activities. See the task details, complete the required steps and submit your work for review.</p>
-<div class="actions"><a class="btn primary js-telegram" href="https://t.me/Axev78">View Available Tasks on Telegram</a><a class="btn secondary js-whatsapp" href="https://wa.link/eywapt">Chat on WhatsApp</a></div>
+<div class="actions"><a class="btn primary telegram-btn js-telegram" href="https://t.me/Axev78">View Available Tasks on Telegram</a><a class="btn secondary whatsapp-btn js-whatsapp" href="https://wa.link/eywapt">Chat on WhatsApp</a></div>
 <div class="small">No joining fee or upfront investment is required for the free tasks listed on this page. Task availability, eligibility, verification and any reward are subject to the individual task terms.</div>
 </div>
 <div class="heroCard">
@@ -106,7 +113,7 @@ src="https://www.facebook.com/tr?id=1006418772455488&ev=PageView&noscript=1"
 <li><span class="circle">3</span><div><b>Submit your work</b><br><span class="small">Send it through the specified process.</span></div></li>
 <li><span class="circle">4</span><div><b>Verification &amp; payout</b><br><span class="small">If the task has a reward, it follows its stated terms after verification.</span></div></li>
 </ul>
-<a class="btn primary js-telegram" href="https://t.me/Axev78" target="_blank" rel="noopener">Get Task Updates</a>
+<a class="btn primary telegram-btn js-telegram" href="https://t.me/Axev78" target="_blank" rel="noopener">Get Task Updates</a>
 </div>
 <div class="taskBox" id="tasks"><h2>Today's Task Types</h2><p class="small">Examples only — actual availability can change.</p>
 <div class="tasks">
@@ -127,7 +134,7 @@ src="https://www.facebook.com/tr?id=1006418772455488&ev=PageView&noscript=1"
 
 <section class="join"><div class="wrap"><div class="joinbox">
 <div><h2>Get New Task Updates</h2><p>Join Telegram <b>@Axev78</b> for available tasks and instructions.</p><div class="count" id="count">Telegram opens in 10 seconds…</div></div>
-<div class="actions"><a class="btn primary js-telegram" href="https://t.me/Axev78">Open Telegram</a><a class="btn secondary js-whatsapp" href="https://wa.link/eywapt">WhatsApp</a></div>
+<div class="actions"><a class="btn primary telegram-btn js-telegram" href="https://t.me/Axev78">Open Telegram</a><a class="btn secondary whatsapp-btn js-whatsapp" href="https://wa.link/eywapt">WhatsApp</a></div>
 </div></div></section>
 </main>
 
