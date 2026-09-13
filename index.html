@@ -2,164 +2,44 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>AX Marketing | Task Opportunities</title>
-<meta name="description" content="Explore simple digital task opportunities with AX Marketing. No joining fee for listed free tasks.">
-<meta name="theme-color" content="#111827">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<title>Skillz India</title>
 <style>
-:root{--bg:#f6f8fc;--ink:#111827;--muted:#667085;--card:#fff;--line:#e5e9f2;--brand:#635bff;--brand2:#16b3a3;--soft:#eef0ff;--dark:#111827}
-*{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
-a{text-decoration:none;color:inherit}.wrap{width:min(1120px,92%);margin:auto}
-.top{background:#111827;color:#dce3ee;font-size:12px}.topin{display:flex;justify-content:center;gap:26px;padding:8px}.top b{color:#55dfbd}
-header{background:rgba(246,248,252,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
-.nav{display:flex;justify-content:space-between;align-items:center;padding:15px 0}.logo{font-size:22px;font-weight:950;letter-spacing:-1px}.logo i{font-style:normal;color:var(--brand)}
-.navlinks{display:flex;gap:23px;color:#667085;font-size:13px}.navlinks a:hover{color:var(--ink)}
-.navcta{padding:10px 15px;border-radius:10px;background:var(--dark);color:white;font-weight:800;font-size:13px}
-.hero{padding:68px 0 46px}.heroGrid{display:grid;grid-template-columns:1.08fr .92fr;gap:45px;align-items:center}
-.pill{display:inline-flex;padding:7px 12px;border-radius:999px;background:var(--soft);color:#5148d8;font-size:12px;font-weight:900}
-h1{font-size:clamp(40px,6vw,68px);line-height:1.02;letter-spacing:-2.8px;margin:18px 0 15px}.accent{color:var(--brand)}
-.hero p{font-size:17px;line-height:1.7;color:var(--muted);max-width:620px}
-.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.btn{min-height:58px;padding:0 24px;border-radius:14px;display:inline-flex;align-items:center;justify-content:center;font-weight:850;border:1px solid var(--line);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;font-size:16px;letter-spacing:.1px;transition:transform .18s ease,box-shadow .18s ease}.btn:hover{transform:translateY(-2px)}
-.primary{background:var(--brand);color:#fff;border-color:var(--brand)}.secondary{background:#fff}
-/* Branded contact buttons */
-.telegram-btn{background:#229ED9!important;color:#fff!important;border-color:#229ED9!important;font-weight:900!important;min-height:64px;padding:0 28px;font-size:17px;box-shadow:0 7px 20px rgba(34,158,217,.28);animation:telegramPulse 1.25s ease-in-out infinite}
-.whatsapp-btn{background:#25D366!important;color:#fff!important;border-color:#25D366!important;font-weight:900!important;min-height:64px;padding:0 28px;font-size:17px;box-shadow:0 7px 20px rgba(37,211,102,.25);animation:whatsappPulse 1.25s ease-in-out infinite}
-.telegram-btn:hover,.whatsapp-btn:hover{transform:scale(1.035)}
-@keyframes telegramPulse{0%,100%{box-shadow:0 7px 20px rgba(34,158,217,.25)}50%{box-shadow:0 0 0 8px rgba(34,158,217,.13),0 10px 26px rgba(34,158,217,.38)}}
-@keyframes whatsappPulse{0%,100%{box-shadow:0 7px 20px rgba(37,211,102,.23)}50%{box-shadow:0 0 0 8px rgba(37,211,102,.12),0 10px 26px rgba(37,211,102,.34)}}
-@media (prefers-reduced-motion:reduce){.telegram-btn,.whatsapp-btn{animation:none}}
-.small{font-size:12px;color:#8a94a6;line-height:1.55;margin-top:13px}
-.heroCard{background:var(--dark);color:#fff;border-radius:24px;padding:24px;box-shadow:0 22px 55px rgba(17,24,39,.16)}
-.heroCardTop{display:flex;justify-content:space-between;align-items:center}.status{color:#5be0bd;font-size:11px;font-weight:900}
-.big{font-size:34px;font-weight:950;margin:24px 0 3px}.heroCard p{font-size:13px;color:#aeb8c8;margin:0}
-.bar{height:9px;border-radius:20px;background:#283242;margin:20px 0}.bar span{display:block;width:74%;height:100%;border-radius:20px;background:linear-gradient(90deg,#635bff,#16b3a3)}
-.kpis{display:grid;grid-template-columns:1fr 1fr;gap:10px}.kpi{background:#1a2330;border:1px solid #2a3646;padding:13px;border-radius:12px}.kpi strong{display:block}.kpi small{color:#9ca8ba}
-.section{padding:48px 0}.heading{text-align:center;margin-bottom:24px}.heading h2{font-size:31px;margin:0 0 7px}.heading p{color:var(--muted);margin:0}
-.features{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}.feature{background:#fff;border:1px solid var(--line);border-radius:17px;padding:20px}.ico{width:42px;height:42px;border-radius:12px;background:var(--soft);display:grid;place-items:center;font-size:20px}.feature h3{margin:12px 0 7px}.feature p{margin:0;color:var(--muted);font-size:13px;line-height:1.6}
-.process{display:grid;grid-template-columns:1fr 1fr;gap:16px}.processBox,.taskBox{background:#fff;border:1px solid var(--line);border-radius:20px;padding:25px}.processBox h2{margin:0 0 8px}.processBox p{color:var(--muted)}.steps{list-style:none;padding:0;margin:18px 0}.steps li{display:flex;gap:12px;margin:14px 0;align-items:flex-start}.circle{width:28px;height:28px;border-radius:50%;background:var(--soft);color:var(--brand);display:grid;place-items:center;font-weight:900;flex:none}
-.tasks{overflow:hidden;border:1px solid var(--line);border-radius:20px;background:#fff}.task{display:flex;align-items:center;gap:13px;padding:16px;border-bottom:1px solid var(--line)}.task:last-child{border-bottom:0}.taskNo{width:33px;height:33px;border-radius:9px;background:#edf7f5;color:#078c7d;display:grid;place-items:center;font-weight:900}.task strong{display:block}.task small{color:var(--muted);display:block;margin-top:2px}.free{margin-left:auto;font-size:11px;font-weight:900;color:#078c7d;background:#e9f8f4;padding:5px 8px;border-radius:7px}
-.infoGrid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:13px}.info{background:#fff;border:1px solid var(--line);border-radius:17px;padding:20px}.info h3{margin-top:0}.info p{color:var(--muted);font-size:13px;line-height:1.65}
-.join{padding:40px 0}.joinbox{background:linear-gradient(120deg,#111827,#27345b);color:#fff;border-radius:22px;padding:30px;display:flex;justify-content:space-between;align-items:center;gap:20px}.joinbox h2{margin:0 0 6px}.joinbox p{margin:0;color:#c5cedc}.count{margin-top:9px;font-size:12px;color:#aebbd0}
-footer{background:#fff;border-top:1px solid var(--line);padding:27px 0 35px;color:#7b8494;font-size:13px}.footer{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}.ads{margin-top:18px;padding-top:17px;border-top:1px solid var(--line);text-align:center}.ads a{color:var(--brand);font-weight:900}
-@media(max-width:850px){.navlinks{display:none}.heroGrid,.process,.joinbox,.infoGrid{grid-template-columns:1fr}.joinbox{display:grid}.features{grid-template-columns:1fr 1fr}}
-@media(max-width:520px){.features{grid-template-columns:1fr}.hero{padding-top:45px}}
-
-.marketbar{position:sticky;top:0;z-index:10;background:#06111b;border-bottom:1px solid rgba(80,180,255,.18);display:flex;gap:24px;justify-content:center;align-items:center;min-height:42px;padding:0 10px;font-size:13px;font-weight:800;white-space:nowrap;overflow:hidden}.marketbar span{color:#eaf7ff}.marketbar b{color:#20d8a0;margin-left:5px}.marketbar em{color:#20d8a0;font-style:normal;margin-left:3px}.marketbar strong{color:#ff4f64;margin-left:3px}@media(max-width:650px){.marketbar{justify-content:flex-start;gap:18px;font-size:12px}.logo span{color:#159ff5}.ads{color:#8db5d0!important}}
+*{box-sizing:border-box}body{margin:0;background:#020812;color:#fff;font-family:Arial,sans-serif}.page{max-width:760px;margin:auto;min-height:100vh;background:radial-gradient(circle at 50% 10%,#073d92,#03182e 30%,#020812 70%,#01050a)}
+.ticker{height:54px;display:flex;justify-content:space-around;align-items:center;background:#03080d;border-bottom:1px solid #1497ff;font-size:16px;font-weight:800;white-space:nowrap;overflow:hidden}.up{color:#00e6b3}.red{color:#ff4650}
+.hero{text-align:center;padding:50px 20px 25px}.logo{width:120px;height:120px;margin:auto;border:2px solid #1597ff;border-radius:30px;background:#092c52;display:grid;place-items:center;box-shadow:0 0 45px #006fff55}.logo svg{width:80px}
+.brand{font-size:48px;font-weight:900}.brand b{color:#079cff}.tag{margin-top:15px;color:#b9cbe5;letter-spacing:6px;font-size:19px}.active{display:inline-flex;align-items:center;gap:12px;margin-top:32px;padding:12px 30px;border:2px solid #0b9cff;border-radius:40px;background:#06366977;font-weight:800}.dot{width:18px;height:18px;border-radius:50%;background:#00e6b3}
+h1{font-size:34px;line-height:1.2;margin:30px auto 15px}h1 b{color:#079cff}.sub{color:#abc2dd;font-size:18px;margin-bottom:30px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:0 38px}.feature{height:112px;border:1px solid #21405c;border-radius:24px;background:#091e30;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:8px;font-size:18px;font-weight:700}.ico{font-size:34px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);margin:20px 38px 28px;padding:17px 5px;border:1px solid #21405c;border-radius:24px;background:#081b2cbb}.stat{text-align:center;border-right:1px solid #183248}.stat:last-child{border:0}.stat strong{display:block;color:#079cff;font-size:34px}.stat span{color:#b7c8dc}
+.cta{display:flex;justify-content:center;align-items:center;gap:15px;margin:0 38px;padding:22px 15px;border-radius:60px;background:linear-gradient(90deg,#11aefc,#086fff);color:#fff;text-decoration:none;font-size:24px;font-weight:900}.cta svg{width:38px;fill:#fff}
+.count{margin:16px 38px 0;padding:18px;border:1px solid #21405c;border-radius:22px;background:#071929bb;text-align:center;color:#adc2da}.count b{color:#08a7ff}.bar{height:8px;background:#1b3043;border-radius:10px;margin-top:14px}.bar i{display:block;width:72%;height:100%;background:linear-gradient(90deg,#18baff,#8b4cff);border-radius:10px}
+.disclaimer{text-align:center;color:#b9c7d7;font-size:14px;line-height:1.55;margin:28px 40px 20px}.wa{display:flex;width:max-content;max-width:90%;margin:0 auto 34px;padding:14px 24px;border:2px solid #00e89b;border-radius:40px;color:#00e89b;text-decoration:none;font-weight:800;align-items:center;gap:12px}.wa svg{width:27px;fill:#fff}
+@media(max-width:520px){.ticker{height:44px;font-size:12px;padding:0 4px}.hero{padding-top:34px}.logo{width:96px;height:96px}.logo svg{width:62px}.brand{font-size:39px}.tag{font-size:13px;letter-spacing:4px}.active{font-size:14px;padding:10px 18px}h1{font-size:27px}.sub{font-size:16px}.grid{margin:0 18px;gap:12px}.feature{height:105px;font-size:15px;border-radius:20px}.ico{font-size:29px}.stats{margin-left:18px;margin-right:18px}.stat strong{font-size:27px}.stat span{font-size:12px}.cta{margin-left:18px;margin-right:18px;font-size:19px;padding:19px 12px}.count{margin-left:18px;margin-right:18px}.disclaimer{margin-left:24px;margin-right:24px}}
 </style>
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1006418772455488');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1006418772455488&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-
 </head>
-<body>
-<div class="marketbar"><span>NIFTY <b>24,812</b> <em>▲ 0.62%</em></span><span>SENSEX <b>81,240</b> <strong>▼ 0.14%</strong></span><span>BANKNIFTY <b>53,190</b> <em>▲ 0.91%</em></span></div>
-<div class="top"><div class="wrap topin"><span>SKILLZ INDIA</span><span>WITHOUT INVESTMENT WORK</span><span><b>●</b> CHANNEL ACTIVE NOW</span></div></div>
-
-<header><div class="wrap nav">
-<div class="logo"><i>SI</i> Skillz <span>India</span></div>
-<div class="navlinks"><a href="#process">Market Updates</a><a href="#tasks">Daily Tasks</a><a href="#terms">About</a></div>
-<a class="navcta js-telegram" href="https://t.me/Axev78?text=HI%2C%20PLEASE%20GUIDE%20ME%20FOR%20THIS%20OPPORTUNITY%20" target="_blank" rel="noopener">Join Telegram Channel</a>
-</div></header>
-
-<main>
-<section class="hero"><div class="wrap heroGrid">
-<div>
-<div class="pill">CHANNEL ACTIVE NOW</div>
-<h1>Complete Simple Daily Tasks.<br><span class="accent">Build Digital Skills.</span></h1>
-<p>Simple daily tasks, zero cost to join. No spam, no hidden charges.</p>
-<div class="actions"><a class="btn primary telegram-btn js-telegram" href="https://t.me/Axev78?text=HI%2C%20PLEASE%20GUIDE%20ME%20FOR%20THIS%20OPPORTUNITY%20">View Available Daily Tasks on Telegram</a><a class="btn secondary whatsapp-btn js-whatsapp" href="https://wa.link/eywapt">WhatsApp</a></div>
-<div class="small">Joining the channel is free. Results and earnings from any task can vary and are not guaranteed. Please do your own research before proceeding.</div>
-</div>
-<div class="heroCard">
-<div class="heroCardTop"><strong>Market Updates</strong><span class="status">● ACTIVE</span></div>
-<div class="big">4 Daily Tasks / Day</div><p>SENSEX 81,240 • BANKNIFTY 53,190</p>
-<div class="bar"><span></span></div>
-<div class="kpis">
-<div class="kpi"><strong>FREE</strong><small>Members</small></div>
-<div class="kpi"><strong>100%</strong><small>Free</small></div>
-<div class="kpi"><strong>24/7</strong><small>Updates</small></div>
-<div class="kpi"><strong>ACTIVE</strong><small>Channel</small></div>
-</div>
-</div>
-</div></section>
-
-<section class="section"><div class="wrap">
-<div class="heading"><h2>What You Get</h2><p>A straightforward task experience without exaggerated promises.</p></div>
-<div class="features">
-<div class="feature"><div class="ico">✓</div><h3>Simple Daily Tasks</h3><p>Easy-to-follow activities with the task requirements shown before you begin.</p></div>
-<div class="feature"><div class="ico">₹</div><h3>No Joining Fee</h3><p>The free tasks shown here do not require an upfront joining payment.</p></div>
-<div class="feature"><div class="ico">◷</div><h3>Flexible Timing</h3><p>Complete eligible tasks according to the instructions and available task window.</p></div>
-<div class="feature"><div class="ico">▣</div><h3>Clear Process</h3><p>Task details, submission and verification steps are explained before completion.</p></div>
-</div></div></section>
-
-<section class="section" id="process"><div class="wrap">
-<div class="process">
-<div class="processBox"><h2>How It Works</h2><p>Four simple steps from task selection to review.</p>
-<ul class="steps">
-<li><span class="circle">1</span><div><b>Choose a task</b><br><span class="small">Read the requirements and eligibility.</span></div></li>
-<li><span class="circle">2</span><div><b>Complete the task</b><br><span class="small">Follow the provided instructions.</span></div></li>
-<li><span class="circle">3</span><div><b>Submit your work</b><br><span class="small">Send it through the specified process.</span></div></li>
-<li><span class="circle">4</span><div><b>Verification &amp; payout</b><br><span class="small">If the task has a reward, it follows its stated terms after verification.</span></div></li>
-</ul>
-<a class="btn primary telegram-btn js-telegram" href="https://t.me/Axev78?text=HI%2C%20PLEASE%20GUIDE%20ME%20FOR%20THIS%20OPPORTUNITY%20" target="_blank" rel="noopener">Get Task Updates</a>
-</div>
-<div class="taskBox" id="tasks"><h2>Today's Task Types</h2><p class="small">Examples only — actual availability can change.</p>
-<div class="tasks">
-<div class="task"><div class="taskNo">01</div><div><strong>Social Media Activity</strong><small>Simple activity according to the task brief.</small></div><span class="free">FREE</span></div>
-<div class="task"><div class="taskNo">02</div><div><strong>Content Activity</strong><small>Basic content or creative-related task.</small></div><span class="free">FREE</span></div>
-<div class="task"><div class="taskNo">03</div><div><strong>Marketing Research</strong><small>Organize information using the provided instructions.</small></div><span class="free">FREE</span></div>
-<div class="task"><div class="taskNo">04</div><div><strong>Digital Practice Task</strong><small>Beginner-friendly marketing activity.</small></div><span class="free">FREE</span></div>
-</div></div>
-</div></div></section>
-
-<section class="section" id="terms"><div class="wrap">
-<div class="heading"><h2>Transparent Task Information</h2><p>Know the conditions before starting.</p></div>
-<div class="infoGrid">
-<div class="info"><h3>Task Eligibility</h3><p>Eligibility can differ by task. Read the individual requirements before submitting any work.</p></div>
-<div class="info"><h3>Payout Information</h3><p>If a task includes a payout, its amount, verification requirement and payout timing should be stated with that task. This page does not promise a fixed daily income.</p></div>
-<div class="info"><h3>Safety First</h3><p>Never share passwords, OTPs or sensitive financial information. Do not pay an upfront fee to unlock a free task.</p></div>
-</div></div></section>
-
-<section class="join"><div class="wrap"><div class="joinbox">
-<div><h2>Daily Market & Task Updates</h2><p>Join Telegram Channel <b>@Axev78</b> for available tasks and instructions.</p><div class="count" id="count">Open Telegram to continue</div></div>
-<div class="actions"><a class="btn primary telegram-btn js-telegram" href="https://t.me/Axev78?text=HI%2C%20PLEASE%20GUIDE%20ME%20FOR%20THIS%20OPPORTUNITY%20">Join Telegram Channel</a><a class="btn secondary whatsapp-btn js-whatsapp" href="https://wa.link/eywapt">WhatsApp</a></div>
-</div></div></section>
+<body><main class="page">
+<div class="ticker"><span>NIFTY <i class="up">24,812 ▲ 0.62%</i></span><span class="red">SENSEX 81,240 ▼ 0.14%</span><span class="up">BANKNIFTY 53,190 ▲ 0.91%</span></div>
+<section class="hero">
+<div class="logo"><svg viewBox="0 0 100 100"><path d="M12 77h13V52H12zM31 77h13V39H31zM50 77h13V27H50z" fill="#fff"/><path d="M18 58 42 41l13 9 27-31M73 19l13-1-1 14" fill="none" stroke="#00e6b3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<div class="brand">Skillz <b>India</b></div><div class="tag">LEARN • PRACTICE • GROW</div>
+<div class="active"><span class="dot"></span> CHANNEL ACTIVE NOW</div>
+<h1>Start learning <b>without any investment</b> —<br>join now</h1>
+<p class="sub">Simple daily tasks, zero cost to join. No spam, no hidden charges.</p>
+</section>
+<section class="grid"><div class="feature"><div class="ico">💰</div>Without Investment</div><div class="feature"><div class="ico">📋</div>Daily Task</div><div class="feature"><div class="ico">⚡</div>Instant Setup</div><div class="feature"><div class="ico">🔐</div>Verified Channel</div></section>
+<section class="stats"><div class="stat"><strong>5K+</strong><span>MEMBERS</span></div><div class="stat"><strong>100%</strong><span>FREE</span></div><div class="stat"><strong>24/7</strong><span>UPDATES</span></div></section>
+<a class="cta js-telegram" target="_blank" href="https://t.me/Axev78?text=HI%2C%20PLEASE%20GUIDE%20ME%20FOR%20THIS%20OPPORTUNITY%20"><svg viewBox="0 0 24 24"><path d="M21.6 3.2 2.9 10.4c-1.28.51-1.27 1.22-.23 1.53l4.8 1.5 1.84 5.57c.22.62.11.87.75.87.49 0 .71-.23.98-.5l2.35-2.28 4.89 3.61c.9.5 1.55.24 1.78-.84l3.17-14.93c.34-1.34-.51-1.95-1.63-1.73Z"/></svg>Join Telegram Channel</a>
+<div class="count">Opening Telegram in <b id="sec">8s</b> — or tap above<div class="bar"><i></i></div></div>
+<p class="disclaimer">Joining the channel is free. Results and earnings from any task can vary and are not guaranteed.<br>Please do your own research before proceeding.</p>
+<a class="wa js-wa" target="_blank" href="https://wa.link/eywapt"><svg viewBox="0 0 24 24"><path d="M20.5 3.5A11.82 11.82 0 0 0 12.08 0C5.53 0 .2 5.33.2 11.88c0 2.1.55 4.15 1.59 5.96L.1 24l6.3-1.65a11.9 11.9 0 0 0 5.67 1.45h.01c6.54 0 11.88-5.33 11.88-11.88 0-3.18-1.24-6.17-3.46-8.42Zm-8.42 18.25h-.01a9.88 9.88 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.23-.37a9.86 9.86 0 1 1 8.37 4.63Zm5.42-7.39c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.39-1.47-.88-.79-1.47-1.77-1.64-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.21 5.09 4.5.71.31 1.27.5 1.7.64.71.23 1.35.2 1.86.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z"/></svg>Ads Managed By AX Marketing (Asif)</a>
 </main>
-
-<footer><div class="wrap">
-<div class="footer"><span>© 2026 Skillz India</span><span>Market & task information</span><a class="js-telegram" href="https://t.me/Axev78?text=HI%2C%20PLEASE%20GUIDE%20ME%20FOR%20THIS%20OPPORTUNITY%20" target="_blank" rel="noopener">Telegram</a></div>
-<div class="ads">Creative promoted by <b>AX Marketing (Asif)</b> — <a class="js-whatsapp" href="https://wa.link/eywapt" target="_blank" rel="noopener">WhatsApp</a></div>
-</div></footer>
-
 <script>
-const target="https://t.me/Axev78?text=HI%2C%20PLEASE%20GUIDE%20ME%20FOR%20THIS%20OPPORTUNITY%20";
-let leadSent=false;
-function sendLead(){
-  if(leadSent) return;
-  leadSent=true;
-  if(typeof fbq==="function") fbq("track","Lead",{content_name:"Skillz India Telegram Lead"});
-}
-document.querySelectorAll(".js-telegram").forEach(e=>e.addEventListener("click",function(){
-  sendLead();
-}));
-document.querySelectorAll(".js-whatsapp").forEach(e=>e.addEventListener("click",()=>{
-  if(typeof fbq==="function") fbq("track","Contact",{channel:"whatsapp"});
-}));
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','1006418772455488');fbq('track','PageView');
+let sent=false;document.querySelector('.js-telegram').addEventListener('click',()=>{if(!sent&&typeof fbq==='function'){sent=true;fbq('track','Lead',{content_name:'Skillz India Telegram Lead'});}});
+document.querySelector('.js-wa').addEventListener('click',()=>{if(typeof fbq==='function')fbq('track','Contact',{channel:'whatsapp'});});
+let n=8;setInterval(()=>{n=n<=1?8:n-1;document.getElementById('sec').textContent=n+'s'},1000);
 </script>
-</body>
-</html>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1006418772455488&ev=PageView&noscript=1"></noscript>
+</body></html>
