@@ -2,38 +2,94 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 <title>Skillz India</title>
 <style>
-*{box-sizing:border-box}body{margin:0;background:#020812;color:#fff;font-family:Arial,sans-serif}.page{max-width:760px;margin:auto;min-height:100vh;background:radial-gradient(circle at 50% 10%,#073d92,#03182e 30%,#020812 70%,#01050a)}
-.ticker{height:54px;display:flex;justify-content:space-around;align-items:center;background:#03080d;border-bottom:1px solid #1497ff;font-size:16px;font-weight:800;white-space:nowrap;overflow:hidden}.up{color:#00e6b3}.red{color:#ff4650}
-.hero{text-align:center;padding:50px 20px 25px}.logo{width:120px;height:120px;margin:auto;border:2px solid #1597ff;border-radius:30px;background:#092c52;display:grid;place-items:center;box-shadow:0 0 45px #006fff55}.logo svg{width:80px}
-.brand{font-size:48px;font-weight:900}.brand b{color:#079cff}.tag{margin-top:15px;color:#b9cbe5;letter-spacing:6px;font-size:19px}.active{display:inline-flex;align-items:center;gap:12px;margin-top:32px;padding:12px 30px;border:2px solid #0b9cff;border-radius:40px;background:#06366977;font-weight:800}.dot{width:18px;height:18px;border-radius:50%;background:#00e6b3}
-h1{font-size:34px;line-height:1.2;margin:30px auto 15px}h1 b{color:#079cff}.sub{color:#abc2dd;font-size:18px;margin-bottom:30px}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:0 38px}.feature{height:112px;border:1px solid #21405c;border-radius:24px;background:#091e30;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:8px;font-size:18px;font-weight:700}.ico{font-size:34px}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);margin:20px 38px 28px;padding:17px 5px;border:1px solid #21405c;border-radius:24px;background:#081b2cbb}.stat{text-align:center;border-right:1px solid #183248}.stat:last-child{border:0}.stat strong{display:block;color:#079cff;font-size:34px}.stat span{color:#b7c8dc}
-.cta{display:flex;justify-content:center;align-items:center;gap:15px;margin:0 38px;padding:22px 15px;border-radius:60px;background:linear-gradient(90deg,#11aefc,#086fff);color:#fff;text-decoration:none;font-size:24px;font-weight:900}.cta svg{width:38px;fill:#fff}
-.count{margin:16px 38px 0;padding:18px;border:1px solid #21405c;border-radius:22px;background:#071929bb;text-align:center;color:#adc2da}.count b{color:#08a7ff}.bar{height:8px;background:#1b3043;border-radius:10px;margin-top:14px}.bar i{display:block;width:72%;height:100%;background:linear-gradient(90deg,#18baff,#8b4cff);border-radius:10px}
-.disclaimer{text-align:center;color:#b9c7d7;font-size:14px;line-height:1.55;margin:28px 40px 20px}.wa{display:flex;width:max-content;max-width:90%;margin:0 auto 34px;padding:14px 24px;border:2px solid #00e89b;border-radius:40px;color:#00e89b;text-decoration:none;font-weight:800;align-items:center;gap:12px}.wa svg{width:27px;fill:#fff}
-@media(max-width:520px){.ticker{height:44px;font-size:12px;padding:0 4px}.hero{padding-top:34px}.logo{width:96px;height:96px}.logo svg{width:62px}.brand{font-size:39px}.tag{font-size:13px;letter-spacing:4px}.active{font-size:14px;padding:10px 18px}h1{font-size:27px}.sub{font-size:16px}.grid{margin:0 18px;gap:12px}.feature{height:105px;font-size:15px;border-radius:20px}.ico{font-size:29px}.stats{margin-left:18px;margin-right:18px}.stat strong{font-size:27px}.stat span{font-size:12px}.cta{margin-left:18px;margin-right:18px;font-size:19px;padding:19px 12px}.count{margin-left:18px;margin-right:18px}.disclaimer{margin-left:24px;margin-right:24px}}
+*{box-sizing:border-box}
+html,body{margin:0;width:100%;height:100%;overflow:hidden}
+body{background:#01050a;color:#fff;font-family:Arial,Helvetica,sans-serif}
+.page{width:100%;height:100dvh;max-width:760px;margin:auto;overflow:hidden;background:radial-gradient(circle at 50% 8%,#073d92 0,#03182e 27%,#020812 65%,#01050a 100%);display:flex;flex-direction:column;justify-content:center;padding:3dvh 0}
+
+.ticker{height:4.2vh;min-height:28px;display:flex;align-items:center;justify-content:space-around;gap:6px;padding:0 7px;background:#03080d;border-bottom:1px solid #1497ff;font-size:clamp(10px,1.7vh,16px);font-weight:800;white-space:nowrap;overflow:hidden;flex-shrink:0}
+.up{color:#00e6b3}.red{color:#ff4650}
+
+.content{width:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0;flex:1;min-height:0}
+.hero{text-align:center;width:100%;padding:1.5vh 18px .8vh}
+.logo{width:9.5vh;height:9.5vh;min-width:48px;min-height:48px;max-width:76px;max-height:76px;margin:0 auto .7vh;border:1px solid #1597ff;border-radius:2.2vh;background:#092c52;display:grid;place-items:center;box-shadow:0 0 30px #006fff44}
+.logo svg{width:62%;height:62%}
+.brand{font-size:clamp(24px,4.5vh,42px);line-height:1;font-weight:900}.brand b{color:#079cff}
+.tag{margin-top:.8vh;color:#b9cbe5;letter-spacing:clamp(2px,.7vh,5px);font-size:clamp(8px,1.6vh,15px)}
+.active{display:inline-flex;align-items:center;gap:7px;margin-top:1.5vh;padding:.7vh 2.2vh;border:1px solid #0b9cff;border-radius:30px;background:#06366966;font-size:clamp(9px,1.65vh,15px);font-weight:800}
+.dot{width:1.4vh;height:1.4vh;min-width:8px;min-height:8px;border-radius:50%;background:#00e6b3}
+h1{font-size:clamp(17px,3.1vh,28px);line-height:1.08;margin:1.6vh auto .7vh;max-width:650px}h1 b{color:#079cff}
+.sub{color:#abc2dd;font-size:clamp(9px,1.65vh,15px);margin:.5vh auto 1.4vh}
+
+.grid{width:calc(100% - 44px);max-width:680px;display:grid;grid-template-columns:1fr 1fr;gap:1vh}
+.feature{height:7.5vh;min-height:42px;border:1px solid #21405c;border-radius:1.8vh;background:#091e30;display:flex;flex-direction:row;justify-content:center;align-items:center;gap:7px;font-size:clamp(10px,1.8vh,16px);font-weight:700}
+.ico{font-size:clamp(16px,2.8vh,25px)}
+
+.stats{width:calc(100% - 44px);max-width:680px;height:6.3vh;min-height:38px;display:grid;grid-template-columns:repeat(3,1fr);margin:1vh 0 1.2vh;padding:0 3px;border:1px solid #21405c;border-radius:1.8vh;background:#081b2cbb}
+.stat{text-align:center;border-right:1px solid #183248;display:flex;flex-direction:column;justify-content:center}.stat:last-child{border:0}.stat strong{color:#079cff;font-size:clamp(17px,2.9vh,27px);line-height:1}.stat span{color:#b7c8dc;font-size:clamp(7px,1.3vh,12px);margin-top:2px}
+
+.cta{width:calc(100% - 44px);max-width:680px;height:7.1vh;min-height:43px;display:flex;justify-content:center;align-items:center;gap:10px;border-radius:5vh;background:linear-gradient(90deg,#11aefc,#086fff);color:#fff;text-decoration:none;font-size:clamp(15px,2.5vh,22px);font-weight:900}
+.cta svg{width:clamp(22px,3.5vh,32px);fill:#fff}
+
+.count{width:calc(100% - 44px);max-width:680px;height:5.8vh;min-height:36px;margin:1vh 0 0;padding:1vh 14px;border:1px solid #21405c;border-radius:1.8vh;background:#071929bb;text-align:center;color:#adc2da;font-size:clamp(8px,1.45vh,13px)}
+.count b{color:#08a7ff}.bar{height:4px;background:#1b3043;border-radius:10px;margin-top:.7vh}.bar i{display:block;width:72%;height:100%;background:linear-gradient(90deg,#18baff,#8b4cff);border-radius:10px}
+
+.disclaimer{width:calc(100% - 50px);max-width:650px;text-align:center;color:#aebfd0;font-size:clamp(7px,1.2vh,11px);line-height:1.25;margin:1vh 0 .8vh}
+.wa{height:5.3vh;min-height:34px;display:flex;align-items:center;justify-content:center;gap:8px;padding:0 18px;border:1px solid #00e89b;border-radius:4vh;color:#00e89b;text-decoration:none;font-size:clamp(8px,1.45vh,13px);font-weight:800}
+.wa svg{width:clamp(18px,2.7vh,24px);fill:#fff}
+
+@media(max-height:650px){
+.page{padding:1vh 0}
+.hero{padding-top:.5vh}
+.active{margin-top:1vh}
+h1{margin-top:1vh}
+}
 </style>
 </head>
-<body><main class="page">
+<body>
+<main class="page">
 <div class="ticker"><span>NIFTY <i class="up">24,812 ▲ 0.62%</i></span><span class="red">SENSEX 81,240 ▼ 0.14%</span><span class="up">BANKNIFTY 53,190 ▲ 0.91%</span></div>
+<div class="content">
 <section class="hero">
 <div class="logo"><svg viewBox="0 0 100 100"><path d="M12 77h13V52H12zM31 77h13V39H31zM50 77h13V27H50z" fill="#fff"/><path d="M18 58 42 41l13 9 27-31M73 19l13-1-1 14" fill="none" stroke="#00e6b3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
 <div class="brand">Skillz <b>India</b></div><div class="tag">LEARN • PRACTICE • GROW</div>
 <div class="active"><span class="dot"></span> CHANNEL ACTIVE NOW</div>
-<h1>Start learning <b>without any investment</b> —<br>join now</h1>
+<h1>Start learning <b>without any investment</b> — join now</h1>
 <p class="sub">Simple daily tasks, zero cost to join. No spam, no hidden charges.</p>
 </section>
-<section class="grid"><div class="feature"><div class="ico">💰</div>Without Investment</div><div class="feature"><div class="ico">📋</div>Daily Task</div><div class="feature"><div class="ico">⚡</div>Instant Setup</div><div class="feature"><div class="ico">🔐</div>Verified Channel</div></section>
-<section class="stats"><div class="stat"><strong>5K+</strong><span>MEMBERS</span></div><div class="stat"><strong>100%</strong><span>FREE</span></div><div class="stat"><strong>24/7</strong><span>UPDATES</span></div></section>
-<a class="cta js-telegram" target="_blank" href="https://t.me/Axev78?text=HI%2C%20PLEASE%20GUIDE%20ME%20FOR%20THIS%20OPPORTUNITY%20"><svg viewBox="0 0 24 24"><path d="M21.6 3.2 2.9 10.4c-1.28.51-1.27 1.22-.23 1.53l4.8 1.5 1.84 5.57c.22.62.11.87.75.87.49 0 .71-.23.98-.5l2.35-2.28 4.89 3.61c.9.5 1.55.24 1.78-.84l3.17-14.93c.34-1.34-.51-1.95-1.63-1.73Z"/></svg>Join Telegram Channel</a>
+
+<section class="grid">
+<div class="feature"><span class="ico">💰</span>Without Investment</div>
+<div class="feature"><span class="ico">📋</span>Daily Task</div>
+<div class="feature"><span class="ico">⚡</span>Instant Setup</div>
+<div class="feature"><span class="ico">🔐</span>Verified Channel</div>
+</section>
+
+<section class="stats">
+<div class="stat"><strong>5K+</strong><span>MEMBERS</span></div>
+<div class="stat"><strong>100%</strong><span>FREE</span></div>
+<div class="stat"><strong>24/7</strong><span>UPDATES</span></div>
+</section>
+
+<a class="cta js-telegram" target="_blank" rel="noopener" href="https://t.me/Axev78?text=HI%2C%20PLEASE%20GUIDE%20ME%20FOR%20THIS%20OPPORTUNITY%20">
+<svg viewBox="0 0 24 24"><path d="M21.6 3.2 2.9 10.4c-1.28.51-1.27 1.22-.23 1.53l4.8 1.5 1.84 5.57c.22.62.11.87.75.87.49 0 .71-.23.98-.5l2.35-2.28 4.89 3.61c.9.5 1.55.24 1.78-.84l3.17-14.93c.34-1.34-.51-1.95-1.63-1.73Z"/></svg>
+Join Telegram Channel
+</a>
+
 <div class="count">Opening Telegram in <b id="sec">8s</b> — or tap above<div class="bar"><i></i></div></div>
-<p class="disclaimer">Joining the channel is free. Results and earnings from any task can vary and are not guaranteed.<br>Please do your own research before proceeding.</p>
-<a class="wa js-wa" target="_blank" href="https://wa.link/eywapt"><svg viewBox="0 0 24 24"><path d="M20.5 3.5A11.82 11.82 0 0 0 12.08 0C5.53 0 .2 5.33.2 11.88c0 2.1.55 4.15 1.59 5.96L.1 24l6.3-1.65a11.9 11.9 0 0 0 5.67 1.45h.01c6.54 0 11.88-5.33 11.88-11.88 0-3.18-1.24-6.17-3.46-8.42Zm-8.42 18.25h-.01a9.88 9.88 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.23-.37a9.86 9.86 0 1 1 8.37 4.63Zm5.42-7.39c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.39-1.47-.88-.79-1.47-1.77-1.64-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.21 5.09 4.5.71.31 1.27.5 1.7.64.71.23 1.35.2 1.86.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z"/></svg>Ads Managed By AX Marketing (Asif)</a>
+
+<p class="disclaimer">Joining the channel is free. Results and earnings from any task can vary and are not guaranteed. Please do your own research before proceeding.</p>
+
+<a class="wa js-wa" target="_blank" rel="noopener" href="https://wa.link/eywapt">
+<svg viewBox="0 0 24 24"><path d="M20.5 3.5A11.82 11.82 0 0 0 12.08 0C5.53 0 .2 5.33.2 11.88c0 2.1.55 4.15 1.59 5.96L.1 24l6.3-1.65a11.9 11.9 0 0 0 5.67 1.45h.01c6.54 0 11.88-5.33 11.88-11.88 0-3.18-1.24-6.17-3.46-8.42Zm-8.42 18.25h-.01a9.88 9.88 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.23-.37a9.86 9.86 0 1 1 8.37 4.63Zm5.42-7.39c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.39-1.47-.88-.79-1.47-1.77-1.64-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.21 5.09 4.5.71.31 1.27.5 1.7.64.71.23 1.35.2 1.86.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z"/></svg>
+Ads Managed By AX Marketing (Asif)
+</a>
+</div>
 </main>
+
 <script>
 !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
 fbq('init','1006418772455488');fbq('track','PageView');
@@ -42,4 +98,5 @@ document.querySelector('.js-wa').addEventListener('click',()=>{if(typeof fbq==='
 let n=8;setInterval(()=>{n=n<=1?8:n-1;document.getElementById('sec').textContent=n+'s'},1000);
 </script>
 <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1006418772455488&ev=PageView&noscript=1"></noscript>
-</body></html>
+</body>
+</html>
