@@ -1,102 +1,196 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-<title>Skillz India</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Skillz Taskers — Start Earning Without Investment</title>
 <style>
-*{box-sizing:border-box}
-html,body{margin:0;width:100%;height:100%;overflow:hidden}
-body{background:#01050a;color:#fff;font-family:Arial,Helvetica,sans-serif}
-.page{width:100%;height:100dvh;max-width:760px;margin:auto;overflow:hidden;background:radial-gradient(circle at 50% 8%,#073d92 0,#03182e 27%,#020812 65%,#01050a 100%);display:flex;flex-direction:column;justify-content:center;padding:3dvh 0}
+  :root{
+    --bg-1:#05090a;
+    --bg-2:#081512;
+    --card:#0f1815;
+    --card-border:rgba(255,255,255,0.08);
+    --text:#eef4f1;
+    --text-dim:#8fa39c;
+    --teal:#26d9a8;
+    --teal-dim:#1a9c78;
+    --violet:#a78bfa;
+    --green:#3ddc84;
+    --red:#ff6b6b;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html,body{
+    background:radial-gradient(circle at 50% -10%, var(--bg-2), var(--bg-1) 60%);
+    color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    min-height:100vh;
+  }
+  .wrap{ max-width:480px; margin:0 auto; padding:0 18px 8px; }
 
-.ticker{height:4.2vh;min-height:28px;display:flex;align-items:center;justify-content:space-around;gap:6px;padding:0 7px;background:#03080d;border-bottom:1px solid #1497ff;font-size:clamp(10px,1.7vh,16px);font-weight:800;white-space:nowrap;overflow:hidden;flex-shrink:0}
-.up{color:#00e6b3}.red{color:#ff4650}
+  /* Ticker */
+  .ticker{
+    overflow:hidden; white-space:nowrap;
+    background:#000; border-bottom:1px solid rgba(255,255,255,0.06);
+    padding:6px 0; margin-bottom:12px;
+  }
+  .ticker-track{ display:inline-block; animation:scroll 22s linear infinite; font-size:11px; font-weight:700; letter-spacing:0.3px; }
+  .ticker-track span{ margin-right:32px; }
+  .up{ color:var(--green); }
+  .down{ color:var(--red); }
+  @keyframes scroll{ 0%{transform:translateX(0);} 100%{transform:translateX(-50%);} }
 
-.content{width:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0;flex:1;min-height:0}
-.hero{text-align:center;width:100%;padding:1.5vh 18px .8vh}
-.logo{width:9.5vh;height:9.5vh;min-width:48px;min-height:48px;max-width:76px;max-height:76px;margin:0 auto .7vh;border:1px solid #1597ff;border-radius:2.2vh;background:#092c52;display:grid;place-items:center;box-shadow:0 0 30px #006fff44}
-.logo svg{width:62%;height:62%}
-.brand{font-size:clamp(24px,4.5vh,42px);line-height:1;font-weight:900}.brand b{color:#079cff}
-.tag{margin-top:.8vh;color:#b9cbe5;letter-spacing:clamp(2px,.7vh,5px);font-size:clamp(8px,1.6vh,15px)}
-.active{display:inline-flex;align-items:center;gap:7px;margin-top:1.5vh;padding:.7vh 2.2vh;border:1px solid #0b9cff;border-radius:30px;background:#06366966;font-size:clamp(9px,1.65vh,15px);font-weight:800}
-.dot{width:1.4vh;height:1.4vh;min-width:8px;min-height:8px;border-radius:50%;background:#00e6b3}
-h1{font-size:clamp(17px,3.1vh,28px);line-height:1.08;margin:1.6vh auto .7vh;max-width:650px}h1 b{color:#079cff}
-.sub{color:#abc2dd;font-size:clamp(9px,1.65vh,15px);margin:.5vh auto 1.4vh}
+  /* Hero */
+  .hero{ text-align:center; }
+  .icon-box{
+    width:44px; height:44px; margin:0 auto 7px; border-radius:12px;
+    background:linear-gradient(160deg,#0d1c18,#0a1512);
+    border:1px solid rgba(38,217,168,0.25);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .brand{ font-size:20px; font-weight:800; letter-spacing:-0.5px; }
+  .brand .edge{ color:var(--teal); }
+  .kicker{ margin-top:3px; font-size:9px; letter-spacing:1.5px; color:var(--text-dim); font-weight:600; }
+  .status-pill{
+    display:inline-flex; align-items:center; gap:6px; margin-top:8px;
+    padding:4px 12px; border-radius:999px;
+    background:rgba(38,217,168,0.1); border:1px solid rgba(38,217,168,0.3);
+    font-size:9px; font-weight:700; color:var(--teal); letter-spacing:1px;
+  }
+  .dot{ width:6px; height:6px; border-radius:50%; background:var(--teal); animation:pulse 1.8s ease-in-out infinite; }
+  @keyframes pulse{ 0%,100%{opacity:1;} 50%{opacity:0.35;} }
 
-.grid{width:calc(100% - 44px);max-width:680px;display:grid;grid-template-columns:1fr 1fr;gap:1vh}
-.feature{height:7.5vh;min-height:42px;border:1px solid #21405c;border-radius:1.8vh;background:#091e30;display:flex;flex-direction:row;justify-content:center;align-items:center;gap:7px;font-size:clamp(10px,1.8vh,16px);font-weight:700}
-.ico{font-size:clamp(16px,2.8vh,25px)}
+  h1{ margin-top:10px; font-size:16px; line-height:1.25; font-weight:800; }
+  h1 .accent{ color:var(--violet); }
+  .sub{ margin-top:4px; color:var(--text-dim); font-size:10.5px; line-height:1.35; }
 
-.stats{width:calc(100% - 44px);max-width:680px;height:6.3vh;min-height:38px;display:grid;grid-template-columns:repeat(3,1fr);margin:1vh 0 1.2vh;padding:0 3px;border:1px solid #21405c;border-radius:1.8vh;background:#081b2cbb}
-.stat{text-align:center;border-right:1px solid #183248;display:flex;flex-direction:column;justify-content:center}.stat:last-child{border:0}.stat strong{color:#079cff;font-size:clamp(17px,2.9vh,27px);line-height:1}.stat span{color:#b7c8dc;font-size:clamp(7px,1.3vh,12px);margin-top:2px}
+  /* Feature grid */
+  .grid{ display:grid; grid-template-columns:1fr 1fr; gap:6px; margin-top:9px; }
+  .card{ background:var(--card); border:1px solid var(--card-border); border-radius:11px; padding:8px 6px; text-align:center; }
+  .card .ic{ font-size:14px; margin-bottom:3px; display:block; }
+  .card .lb{ font-size:9.5px; font-weight:600; }
 
-.cta{width:calc(100% - 44px);max-width:680px;height:7.1vh;min-height:43px;display:flex;justify-content:center;align-items:center;gap:10px;border-radius:5vh;background:linear-gradient(90deg,#11aefc,#086fff);color:#fff;text-decoration:none;font-size:clamp(15px,2.5vh,22px);font-weight:900}
-.cta svg{width:clamp(22px,3.5vh,32px);fill:#fff}
+  /* Stats */
+  .stats{ display:flex; justify-content:space-between; background:var(--card); border:1px solid var(--card-border); border-radius:11px; padding:7px 6px; margin-top:6px; }
+  .stat{ flex:1; text-align:center; }
+  .stat b{ display:block; font-size:13px; color:var(--teal); }
+  .stat span{ font-size:8px; color:var(--text-dim); letter-spacing:0.5px; }
 
-.count{width:calc(100% - 44px);max-width:680px;height:5.8vh;min-height:36px;margin:1vh 0 0;padding:1vh 14px;border:1px solid #21405c;border-radius:1.8vh;background:#071929bb;text-align:center;color:#adc2da;font-size:clamp(8px,1.45vh,13px)}
-.count b{color:#08a7ff}.bar{height:4px;background:#1b3043;border-radius:10px;margin-top:.7vh}.bar i{display:block;width:72%;height:100%;background:linear-gradient(90deg,#18baff,#8b4cff);border-radius:10px}
+  /* CTA */
+  .cta{
+    display:flex; align-items:center; justify-content:center; gap:8px; margin-top:8px;
+    padding:9px; border-radius:999px;
+    background:linear-gradient(120deg,var(--teal),var(--teal-dim));
+    color:#04140f; font-size:12.5px; font-weight:800; text-decoration:none;
+    box-shadow:0 8px 20px -10px rgba(38,217,168,0.5);
+  }
+  .cta:focus-visible{ outline:3px solid var(--violet); outline-offset:3px; }
+  .redirect-box{ margin-top:5px; background:var(--card); border:1px solid var(--card-border); border-radius:10px; padding:5px 10px; text-align:center; }
+  .redirect-box p{ font-size:9px; color:var(--text-dim); }
+  .redirect-box b{ color:var(--violet); }
+  .bar-track{ margin-top:4px; height:3px; border-radius:2px; background:rgba(255,255,255,0.08); overflow:hidden; }
+  .bar-fill{ height:100%; width:0%; background:linear-gradient(90deg,var(--teal),var(--violet)); transition:width 1s linear; }
 
-.disclaimer{width:calc(100% - 50px);max-width:650px;text-align:center;color:#aebfd0;font-size:clamp(7px,1.2vh,11px);line-height:1.25;margin:1vh 0 .8vh}
-.wa{height:5.3vh;min-height:34px;display:flex;align-items:center;justify-content:center;gap:8px;padding:0 18px;border:1px solid #00e89b;border-radius:4vh;color:#00e89b;text-decoration:none;font-size:clamp(8px,1.45vh,13px);font-weight:800}
-.wa svg{width:clamp(18px,2.7vh,24px);fill:#fff}
+  .alt-link{ margin-top:5px; text-align:center; font-size:9px; color:var(--text-dim); }
+  .alt-link a{ color:var(--teal); font-weight:600; text-decoration:none; border-bottom:1px solid rgba(38,217,168,0.4); }
+  .alt-link a:focus-visible{ outline:2px solid var(--violet); outline-offset:2px; }
 
-@media(max-height:650px){
-.page{padding:1vh 0}
-.hero{padding-top:.5vh}
-.active{margin-top:1vh}
-h1{margin-top:1vh}
-}
+  .disclaimer{ margin-top:5px; font-size:8px; line-height:1.3; color:var(--text-dim); text-align:center; }
+  .managed{ margin:6px auto 0; display:table; padding:5px 11px; border-radius:999px; border:1px solid var(--card-border); font-size:8.5px; color:var(--text-dim); }
+
+  @media (prefers-reduced-motion: reduce){
+    .ticker-track{ animation:none; }
+    .dot{ animation:none; }
+    .bar-fill{ transition:none; }
+  }
 </style>
 </head>
 <body>
-<main class="page">
-<div class="ticker"><span>NIFTY <i class="up">24,812 ▲ 0.62%</i></span><span class="red">SENSEX 81,240 ▼ 0.14%</span><span class="up">BANKNIFTY 53,190 ▲ 0.91%</span></div>
-<div class="content">
-<section class="hero">
-<div class="logo"><svg viewBox="0 0 100 100"><path d="M12 77h13V52H12zM31 77h13V39H31zM50 77h13V27H50z" fill="#fff"/><path d="M18 58 42 41l13 9 27-31M73 19l13-1-1 14" fill="none" stroke="#00e6b3" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-<div class="brand">Skillz <b>India</b></div><div class="tag">LEARN • PRACTICE • GROW</div>
-<div class="active"><span class="dot"></span> CHANNEL ACTIVE NOW</div>
-<h1>Start learning <b>without any investment</b> — join now</h1>
-<p class="sub">Simple daily tasks, zero cost to join. No spam, no hidden charges.</p>
-</section>
 
-<section class="grid">
-<div class="feature"><span class="ico">💰</span>Without Investment</div>
-<div class="feature"><span class="ico">📋</span>Daily Task</div>
-<div class="feature"><span class="ico">⚡</span>Instant Setup</div>
-<div class="feature"><span class="ico">🔐</span>Verified Channel</div>
-</section>
+<div class="ticker"><div class="ticker-track" id="tickerTrack"></div></div>
 
-<section class="stats">
-<div class="stat"><strong>5K+</strong><span>MEMBERS</span></div>
-<div class="stat"><strong>100%</strong><span>FREE</span></div>
-<div class="stat"><strong>24/7</strong><span>UPDATES</span></div>
-</section>
+<div class="wrap">
+  <div class="hero">
+    <div class="icon-box">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path d="M3 17L9 11L13 15L21 6" stroke="url(#g)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M15 6H21V12" stroke="url(#g)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+        <defs><linearGradient id="g" x1="3" y1="17" x2="21" y2="6"><stop stop-color="#26d9a8"/><stop offset="1" stop-color="#a78bfa"/></linearGradient></defs>
+      </svg>
+    </div>
+    <div class="brand">Skillz <span class="edge">Taskers</span></div>
+    <div class="kicker">WITHOUT INVESTMENT WORK</div>
+    <div class="status-pill"><span class="dot"></span>AVAILABLE ON TELEGRAM</div>
 
-<a class="cta js-telegram" target="_blank" rel="noopener" href="https://t.me/Axev78?text=HI%2C%20PLEASE%20GUIDE%20ME%20FOR%20THIS%20OPPORTUNITY%20">
-<svg viewBox="0 0 24 24"><path d="M21.6 3.2 2.9 10.4c-1.28.51-1.27 1.22-.23 1.53l4.8 1.5 1.84 5.57c.22.62.11.87.75.87.49 0 .71-.23.98-.5l2.35-2.28 4.89 3.61c.9.5 1.55.24 1.78-.84l3.17-14.93c.34-1.34-.51-1.95-1.63-1.73Z"/></svg>
-Join Telegram Channel
-</a>
+    <h1>Start earning <span class="accent">without any investment</span> — join now</h1>
+    <p class="sub">Simple daily tasks, zero cost to join. No spam, no hidden charges.</p>
+  </div>
 
-<div class="count">Opening Telegram in <b id="sec">8s</b> — or tap above<div class="bar"><i></i></div></div>
+  <div class="grid">
+    <div class="card"><span class="ic">💰</span><span class="lb">Without Investment</span></div>
+    <div class="card"><span class="ic">📋</span><span class="lb">Daily Task</span></div>
+    <div class="card"><span class="ic">⚡</span><span class="lb">Instant Setup</span></div>
+    <div class="card"><span class="ic">🔐</span><span class="lb">Verified Profile</span></div>
+  </div>
 
-<p class="disclaimer">Joining the channel is free. Results and earnings from any task can vary and are not guaranteed. Please do your own research before proceeding.</p>
+  <div class="stats">
+    <div class="stat"><b id="memberCount">5K+</b><span>GUIDED</span></div>
+    <div class="stat"><b>100%</b><span>FREE</span></div>
+    <div class="stat"><b>24/7</b><span>UPDATES</span></div>
+  </div>
 
-<a class="wa js-wa" target="_blank" rel="noopener" href="https://wa.link/eywapt">
-<svg viewBox="0 0 24 24"><path d="M20.5 3.5A11.82 11.82 0 0 0 12.08 0C5.53 0 .2 5.33.2 11.88c0 2.1.55 4.15 1.59 5.96L.1 24l6.3-1.65a11.9 11.9 0 0 0 5.67 1.45h.01c6.54 0 11.88-5.33 11.88-11.88 0-3.18-1.24-6.17-3.46-8.42Zm-8.42 18.25h-.01a9.88 9.88 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.23-.37a9.86 9.86 0 1 1 8.37 4.63Zm5.42-7.39c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.39-1.47-.88-.79-1.47-1.77-1.64-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.21 5.09 4.5.71.31 1.27.5 1.7.64.71.23 1.35.2 1.86.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z"/></svg>
-Ads Managed By AX Marketing (Asif)
-</a>
+  <a href="#" class="cta" id="ctaBtn">🛫 Message on Telegram</a>
+
+  <div class="redirect-box">
+    <p>Opening Telegram in <b id="countdownNum">8</b>s — or tap above</p>
+    <div class="bar-track"><div class="bar-fill" id="barFill"></div></div>
+  </div>
+
+  <p class="alt-link">Prefer WhatsApp? <a href="#" id="waLink" target="_blank" rel="noopener">Chat here instead</a></p>
+
+  <p class="disclaimer">Contacting us is free. Results and earnings from any task can vary and are not guaranteed. Please do your own research before proceeding.</p>
+
+  <div class="managed">📊 Ads Managed By <span id="managedName">Your Name</span></div>
 </div>
-</main>
 
 <script>
-!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
-fbq('init','1006418772455488');fbq('track','PageView');
-let sent=false;document.querySelector('.js-telegram').addEventListener('click',()=>{if(!sent&&typeof fbq==='function'){sent=true;fbq('track','Lead',{content_name:'Skillz India Telegram Lead'});}});
-document.querySelector('.js-wa').addEventListener('click',()=>{if(typeof fbq==='function')fbq('track','Contact',{channel:'whatsapp'});});
-let n=8;setInterval(()=>{n=n<=1?8:n-1;document.getElementById('sec').textContent=n+'s'},1000);
+  // ===== EDIT THESE =====
+  const TELEGRAM_LINK = "https://t.me/Axev78?text=HI%2C%20PLEASE%20GUIDE%20ME%20FOR%20THIS%20OPPORTUNITY%20";
+  const WHATSAPP_LINK = "https://wa.link/eywapt";
+  const MANAGED_BY = "Ax Marketing";                        // <-- shown in the bottom pill
+  const MEMBER_COUNT = "5K+";                               // <-- shown in stats
+  const COUNTDOWN_SECONDS = 8;                              // <-- auto-redirect delay
+  const TICKER_ITEMS = [
+    {label:"NIFTY", value:"24,812", change:"+0.62%", up:true},
+    {label:"SENSEX", value:"81,240", change:"-0.14%", up:false},
+    {label:"BANKNIFTY", value:"53,190", change:"+0.91%", up:true}
+  ];
+  // =======================
+
+  document.getElementById('ctaBtn').href = TELEGRAM_LINK;
+  document.getElementById('waLink').href = WHATSAPP_LINK;
+  document.getElementById('managedName').textContent = MANAGED_BY;
+  document.getElementById('memberCount').textContent = MEMBER_COUNT;
+
+  const track = document.getElementById('tickerTrack');
+  const renderTicker = () => TICKER_ITEMS.map(t =>
+    `<span>${t.label} ${t.value} <span class="${t.up ? 'up':'down'}">${t.up?'▲':'▼'} ${t.change}</span></span>`
+  ).join('');
+  track.innerHTML = renderTicker() + renderTicker();
+
+  let n = COUNTDOWN_SECONDS;
+  const numEl = document.getElementById('countdownNum');
+  const barEl = document.getElementById('barFill');
+  const timer = setInterval(() => {
+    n -= 1;
+    barEl.style.width = (100 - (n / COUNTDOWN_SECONDS) * 100) + '%';
+    if (n <= 0) {
+      clearInterval(timer);
+      numEl.textContent = '0';
+      window.location.href = TELEGRAM_LINK;
+    } else {
+      numEl.textContent = n;
+    }
+  }, 1000);
 </script>
-<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1006418772455488&ev=PageView&noscript=1"></noscript>
 </body>
 </html>
