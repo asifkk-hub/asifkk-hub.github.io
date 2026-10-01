@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Skillz Taskers — Start Earning</title>
+<style>
+:root{
+  --bg:#020b18;
+  --panel:rgba(8,24,42,.82);
+  --line:#16415f;
+  --cyan:#18cfff;
+  --blue:#168cff;
+  --yellow:#ffd21a;
+  --red:#ff3155;
+  --purple:#9b4dff;
+  --text:#f7fbff;
+  --muted:#a8bfd1;
+}
+*{box-sizing:border-box}
+html,body{margin:0;width:100%;height:100%;overflow:hidden}
+body{
+  background:
+    radial-gradient(circle at 0 0,rgba(255,193,7,.22),transparent 18%),
+    radial-gradient(circle at 100% 8%,rgba(0,116,255,.24),transparent 25%),
+    radial-gradient(circle at 100% 100%,rgba(255,185,0,.12),transparent 20%),
+    var(--bg);
+  color:var(--text);
+  font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+}
+body:before,body:after{
+  content:"";position:fixed;pointer-events:none;border-radius:50%;
+  filter:blur(2px);opacity:.35
+}
+body:before{
+  width:240px;height:240px;left:-150px;top:-100px;
+  border:55px solid #ffc400;transform:rotate(-25deg)
+}
+body:after{
+  width:280px;height:280px;right:-190px;bottom:-130px;
+  border:50px solid #087cff;transform:rotate(35deg)
+}
+.page{
+  width:min(100%,520px);
+  height:100dvh;
+  min-height:600px;
+  margin:auto;
+  padding:clamp(10px,2.2vh,18px) clamp(12px,4vw,22px) 10px;
+  display:flex;
+  flex-direction:column;
+  gap:clamp(7px,1.25vh,12px);
+  position:relative;
+  z-index:1;
+}
+.ticker{
+  height:38px;flex:none;border:1px solid #087fd1;border-radius:22px;
+  background:rgba(2,15,29,.78);display:grid;grid-template-columns:1fr 1.35fr 1fr;
+  align-items:center;padding:0 12px;font-size:clamp(9px,2.25vw,12px);
+  font-weight:800;white-space:nowrap;box-shadow:0 0 20px rgba(0,166,255,.12)
+}
+.ticker span{text-align:center}.up{color:#00f0b1}.down{color:#ff536d}
+.hero{text-align:center;flex:none}
+.brand{display:flex;justify-content:center;align-items:center;gap:7px}
+.brand-icon{
+  width:48px;height:48px;border-radius:14px;display:grid;place-items:center;
+  font-size:25px;color:var(--yellow);border:1px solid #b99b19;
+  background:linear-gradient(145deg,#142131,#050b13);
+  box-shadow:0 0 18px rgba(255,208,0,.15)
+}
+.brand h1{margin:0;font-size:clamp(29px,7.2vw,40px);letter-spacing:-1.5px}
+.brand h1 span{color:var(--yellow)}
+.tag{margin:1px 0 7px;font-size:10px;letter-spacing:4px;color:#d8e7f2;font-weight:700}
+.badge{
+  display:inline-flex;align-items:center;gap:7px;border:1px solid #00d6bd;
+  color:#15e8c8;border-radius:20px;padding:7px 15px;font-weight:800;
+  font-size:11px;background:rgba(0,194,167,.07)
+}
+.badge i{width:8px;height:8px;border-radius:50%;background:#15e8c8}
+.headline{font-size:clamp(17px,4.4vw,23px);font-weight:800;margin:9px 0 2px}
+.headline b{color:var(--yellow)}
+.sub{font-size:12px;color:#b9ccdb;margin:0}
+.features{display:grid;grid-template-columns:1fr 1fr;gap:9px;flex:none}
+.card{
+  min-height:72px;border:1px solid var(--line);border-radius:18px;
+  background:linear-gradient(145deg,rgba(12,32,51,.95),rgba(4,14,27,.88));
+  display:flex;align-items:center;padding:9px 12px;gap:10px;
+  box-shadow:inset 0 1px rgba(255,255,255,.03)
+}
+.card:nth-child(1){border-color:#d3a900}.card:nth-child(2){border-color:#008fff}
+.card:nth-child(3){border-color:#ff3155}.card:nth-child(4){border-color:#8d45ff}
+.ico{
+  width:42px;height:42px;border-radius:50%;display:grid;place-items:center;
+  flex:none;font-size:20px;background:rgba(255,255,255,.06)
+}
+.card:nth-child(1) .ico{color:var(--yellow);background:rgba(255,195,0,.12)}
+.card:nth-child(2) .ico{color:#24aaff;background:rgba(0,143,255,.13)}
+.card:nth-child(3) .ico{color:#ff4560;background:rgba(255,49,85,.13)}
+.card:nth-child(4) .ico{color:#ad64ff;background:rgba(141,69,255,.13)}
+.card strong{display:block;font-size:12px}.card small{display:block;color:#aac0d0;font-size:9px;margin-top:3px}
+.arrow{margin-left:auto;font-size:23px;color:#20a9ff}
+.card:nth-child(1) .arrow,.card:nth-child(4) .arrow{color:var(--yellow)}
+.stats{
+  min-height:64px;border:1px solid #16425f;border-radius:17px;
+  background:rgba(7,22,38,.8);display:grid;grid-template-columns:repeat(3,1fr);
+  align-items:center;flex:none
+}
+.stat{text-align:center;border-right:1px solid #315067}.stat:last-child{border:0}
+.stat strong{display:block;font-size:19px}.stat small{font-size:8px;color:#b4c8d7;letter-spacing:.5px}
+.stat:nth-child(1) strong{color:var(--yellow)}.stat:nth-child(2) strong{color:#ff415a}.stat:nth-child(3) strong{color:#1ba7ff}
+.cta{text-decoration:none;cursor:pointer;
+  height:54px;border:0;border-radius:28px;background:linear-gradient(100deg,#16c9ff,#1595ff);
+  color:white;font-size:16px;font-weight:900;display:flex;align-items:center;
+  justify-content:center;gap:10px;box-shadow:0 8px 24px rgba(0,151,255,.25);flex:none
+}
+.cta .tg{font-size:24px}.cta .go{font-size:22px}
+.progress{
+  height:42px;border:1px solid #214a67;border-radius:22px;background:rgba(5,20,35,.8);
+  display:flex;align-items:center;gap:12px;padding:0 12px;flex:none
+}
+.bar{height:9px;width:36%;border-radius:10px;background:linear-gradient(90deg,#19d5ee,#426eff,#a04bff)}
+.progress span{font-size:10px;color:#c0d0dc;white-space:nowrap}
+.progress b{color:#18bfff}
+.extra{text-align:center;flex:none}.wa{font-size:11px;margin:0 0 5px}.wa a{color:#10d7c0;font-weight:800}
+.note{font-size:8px;line-height:1.35;color:#a6bac8;margin:0 auto 7px;max-width:430px}
+.ad{display:inline-flex;border:1px solid #284b63;border-radius:18px;padding:6px 12px;font-size:9px;color:#bcd0dc}
+.withdraw{
+  border:1px solid #1d5973;border-radius:17px;background:rgba(4,17,30,.9);
+  padding:9px 9px 8px;flex:none
+}
+.whead{display:flex;justify-content:space-between;align-items:center;margin-bottom:7px}
+.wtitle{font-size:12px;font-weight:900}.wtitle i{display:inline-block;width:8px;height:8px;border-radius:50%;background:#00dfb5;margin-right:6px}
+.verified{font-size:8px;color:#16e5c3;border:1px solid #087e78;border-radius:12px;padding:4px 7px}
+.wsub{font-size:8px;color:#8fa8ba;margin-top:2px}
+.people{display:grid;grid-template-columns:repeat(5,1fr);gap:5px}
+.person{min-width:0;border:1px solid #163e59;border-radius:11px;padding:6px 4px;text-align:center;background:#07182a}
+.avatar{width:23px;height:23px;margin:auto;border-radius:50%;display:grid;place-items:center;font-size:10px;font-weight:900;color:white;background:#ff3470}
+.person:nth-child(2) .avatar{background:#178fff}.person:nth-child(3) .avatar{background:#9b48ff}
+.person:nth-child(4) .avatar{background:#ffb20d}.person:nth-child(5) .avatar{background:#20bfa0}
+.name{font-size:7px;color:#c8d7e2;margin-top:3px}.amount{font-size:10px;font-weight:900;color:#00e1b5;margin-top:2px}
+.time{font-size:6.5px;color:#849bab;margin-top:2px;white-space:nowrap}
+@media(max-height:720px){
+  .page{gap:6px}.ticker{height:34px}.brand-icon{width:40px;height:40px;font-size:21px}
+  .tag{font-size:8px}.headline{margin-top:5px}.card{min-height:62px}.ico{width:35px;height:35px;font-size:17px}
+  .stats{min-height:55px}.cta{height:48px}.progress{height:36px}.withdraw{padding:7px}
+}
+</style>
+</head>
+<body>
+<main class="page">
+  <div class="ticker">
+    <span class="up">▲ +0.62%</span><span>SENSEX 81,240 <em class="down">▼ -0.14%</em></span><span>BANKNIFTY 53,190 <b class="up">▲</b></span>
+  </div>
+
+  <section class="hero">
+    <div class="brand"><div class="brand-icon">↗</div><h1>Skillz <span>Taskers</span></h1></div>
+    <div class="tag">WITHOUT INVESTMENT WORK</div>
+    <div class="badge"><i></i> AVAILABLE ON TELEGRAM</div>
+    <div class="headline">Start earning <b>without any investment</b> — join now</div>
+    <p class="sub">Simple daily tasks, zero cost to join. No spam, no hidden charges.</p>
+  </section>
+
+  <section class="features">
+    <div class="card"><div class="ico">💰</div><div><strong>Without Investment</strong><small>No deposit, no fees</small></div><div class="arrow">›</div></div>
+    <div class="card"><div class="ico">▣</div><div><strong>Daily Task</strong><small>Complete &amp; earn</small></div><div class="arrow">›</div></div>
+    <div class="card"><div class="ico">⚡</div><div><strong>Instant Setup</strong><small>Start in minutes</small></div><div class="arrow">›</div></div>
+    <div class="card"><div class="ico">♢</div><div><strong>Verified Profile</strong><small>Safe &amp; trusted</small></div><div class="arrow">›</div></div>
+  </section>
+
+  <section class="stats">
+    <div class="stat"><strong>5K+</strong><small>GUIDED</small></div>
+    <div class="stat"><strong>100%</strong><small>FREE</small></div>
+    <div class="stat"><strong>24/7</strong><small>UPDATES</small></div>
+  </section>
+
+  <a class="cta" href="https://t.me/Axev78?text=Hello%20Sir%20I%20want%20to%20do%20task%20based%20work%20" target="_blank" rel="noopener"><span class="tg">➤</span> Message on Telegram <span class="go">→</span></a>
+
+  <div class="progress"><div class="bar"></div><span>Opening Telegram in <b>6s</b> — or tap above</span></div>
+
+  <div class="extra">
+    <p class="wa">Prefer WhatsApp? <a href="https://t.me/Axev78?text=Hello%20Sir%20I%20want%20to%20do%20task%20based%20work%20" target="_blank" rel="noopener">Chat here instead</a></p>
+    <p class="note">Contacting us is free. Results and earnings from any task can vary and are not guaranteed. Please do your own research before proceeding.</p>
+    <div class="ad">📊 Ads Managed By Ax Marketing</div>
+  </div>
+
+  <section class="withdraw">
+    <div class="whead">
+      <div><div class="wtitle"><i></i>Live Withdrawals</div><div class="wsub">Recent members who have received their earnings</div></div>
+      <div class="verified">✓ 100% Genuine Payments</div>
+    </div>
+    <div class="people">
+      <div class="person"><div class="avatar">S</div><div class="name">S***72</div><div class="amount">₹2,350</div><div class="time">✓ Withdrawn · 2m</div></div>
+      <div class="person"><div class="avatar">R</div><div class="name">R***19</div><div class="amount">₹1,780</div><div class="time">✓ Withdrawn · 5m</div></div>
+      <div class="person"><div class="avatar">P</div><div class="name">P***56</div><div class="amount">₹3,240</div><div class="time">✓ Withdrawn · 8m</div></div>
+      <div class="person"><div class="avatar">K</div><div class="name">K***31</div><div class="amount">₹1,650</div><div class="time">✓ Withdrawn · 12m</div></div>
+      <div class="person"><div class="avatar">N</div><div class="name">N***08</div><div class="amount">₹2,910</div><div class="time">✓ Withdrawn · 15m</div></div>
+    </div>
+  </section>
+</main>
+</body>
+</html>
